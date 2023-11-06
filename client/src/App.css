@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.enterTodo {
+  background-color: rgb(55,65,81);
+  width: 35%;
+  height: 2em;
+  padding: 2em;
+  color: white;
+  flex-grow: 2;
+  border: none;
+}
+.enterTodo:focus {
+  outline: none;
+}
+
+.submitButton {
+  background-color: rgb(27,100,241);
+  color: white;
+  height: 65%;
+  width: 10%;
+  border-radius: 15px;
+}
+
+.enterTodoMenu {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(75,85,99);
+  padding: 1px;
+  background-color: rgb(55,65,81);
+  width: 75%;
+  align-items: center;
+  padding-right: 1%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px black;
+}
+.enterTodoMenu:focus-within {
+  outline: 1px solid blue;
+}
+
+.enterWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.mainBackground {
+  background-color: rgb(17,24,39);
+  padding: 5%;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.listContentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.todoListTable {
+  width: 75%;
+}
+
+.oneEntry {
+  border: 1px solid 63768F;
+  /* padding-right: 200px; */
+}
+
+.contentTable tr:nth-child(even) {
+  background-color: rgb(100 116 139);
+  /* background-color: red; */
+}
+
+.contentTable .oneEntry:hover {
+  background-color: rgb(148 163 184);
+}
+
+.checkBox {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.deleteButton {
+  box-shadow: 0px 0px 40px black;
+}
+
+.tdClassButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  /* align-items: center; */
+}
+
+.checkButton {
+  justify-self: center;
+  height: 50px;
+}
+
+.subItemsTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subItemsHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
