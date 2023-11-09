@@ -32,7 +32,7 @@ const OneTodo = (props) => {
             message: newItem,
             complete: false
         }
-        axios.put('http://localhost:8000/api/todo/add/' + id, {
+        axios.put('https://todolist-btqf.onrender.com/api/todo/add/' + id, {
             message: message,
             complete: todo.complete,
             subItems: [...todo.subItems, item]
@@ -57,7 +57,7 @@ const OneTodo = (props) => {
             return item;
         })
 
-        axios.patch("http://localhost:8000/api/todo/" + id, {
+        axios.patch("https://todolist-btqf.onrender.com/api/todo/" + id, {
             subItems: updatedSubItems
         })
         .then(() => {
@@ -70,7 +70,7 @@ const OneTodo = (props) => {
 
     // GETTING SUB ITEMS FROM SINGLE MAIN TODO
     useEffect(() => {
-        axios.get("http://localhost:8000/api/todo/" + id)
+        axios.get("https://todolist-btqf.onrender.com/api/todo/" + id)
         .then((res) => {
             setTodo(res.data);
             setMessage(res.data.message);
@@ -85,7 +85,7 @@ const OneTodo = (props) => {
 
     // DELETING TODO
     const removeTodo = (id) => {
-        axios.delete('http://localhost:8000/api/todo/' + id)
+        axios.delete('https://todolist-btqf.onrender.com/api/todo/' + id)
             .then((res) => {
                 console.log("deleted");
                 navigate("/");

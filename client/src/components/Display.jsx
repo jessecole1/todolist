@@ -13,7 +13,7 @@ const Display = (props) => {
 
     // UPDATING MAIN TODO COMPLETE
     const handleComplete = (todo) => {
-        axios.patch('http://localhost:8000/api/todo/' + todo._id, {
+        axios.patch('https://todolist-btqf.onrender.com/api/todo/' + todo._id, {
             complete: !todo.complete
         })
 

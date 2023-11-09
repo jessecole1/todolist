@@ -10,7 +10,7 @@ const Main = () => {
 
     // GETTING USER'S TODO DATA
     useEffect(() => {
-        axios.get("http://localhost:8000/api/todos")
+        axios.get("https://todolist-btqf.onrender.com/api/todos")
         .then(res => {
             console.log("RES: " + res.data.todo);
             let arr = [];
@@ -37,7 +37,7 @@ const Main = () => {
             message: message,
             complete:false
         }
-        axios.post("http://localhost:8000/api/todo",{
+        axios.post("https://todolist-btqf.onrender.com/api/todo",{
             message:message,
             complete:false
         })
